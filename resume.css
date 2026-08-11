@@ -1,0 +1,430 @@
+/* ===================== Base / Tokens ===================== */
+:root {
+  --blue: #5b6ef6;
+  --ink: #111111;
+  --muted: #4b5563;
+  --meta: #6b7280;
+  --divider: #d7dbe0;
+  --dot-off: #d9dce3;
+  --page-w: 1000px;
+  --page-h: 1414px; /* A4 aspect ratio at --page-w */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #e9eaee;
+  color: var(--ink);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===================== Page ===================== */
+.page {
+  width: var(--page-w);
+  min-height: var(--page-h);
+  margin: 32px auto;
+  background: #ffffff;
+  padding: 44px 48px 56px;
+}
+
+/* Space between stacked pages on screen */
+.page + .page {
+  margin-top: 32px;
+}
+
+/* Print: one sheet per .page, no screen chrome */
+@media print {
+  html,
+  body {
+    background: #ffffff;
+  }
+  .page {
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    page-break-after: always;
+  }
+  .page:last-child {
+    page-break-after: auto;
+  }
+}
+
+/* ===================== Continuation header (page 2+) ===================== */
+.header-cont {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 20px;
+  margin-bottom: 8px;
+  border-bottom: 2.5px solid var(--ink);
+}
+
+.header-cont .cont-name {
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
+}
+
+.header-cont .cont-page {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--meta);
+}
+
+/* ===================== Header ===================== */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 28px;
+}
+
+.name {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  line-height: 1.02;
+}
+
+.role {
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.contact {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 26px;
+  row-gap: 10px;
+  max-width: 640px;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  color: var(--ink);
+}
+
+.contact-item strong {
+  font-weight: 700;
+}
+
+.ico {
+  width: 16px;
+  height: 16px;
+  fill: var(--blue);
+  flex-shrink: 0;
+}
+
+.ico-sm {
+  width: 13px;
+  height: 13px;
+  fill: var(--meta);
+  flex-shrink: 0;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background: var(--blue);
+  display: block;
+}
+
+/* ===================== Two-column layout ===================== */
+.columns {
+  display: flex;
+  gap: 44px;
+}
+
+.col-left {
+  width: 56%;
+}
+
+.col-right {
+  width: 44%;
+}
+
+.block {
+  margin-bottom: 30px;
+}
+
+.block:last-child {
+  margin-bottom: 0;
+}
+
+/* ===================== Section headings ===================== */
+.section-title {
+  font-size: 21px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  padding-bottom: 8px;
+  border-bottom: 2.5px solid var(--ink);
+  margin-bottom: 16px;
+}
+
+.sub-title {
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 14px 0 12px;
+}
+
+.sub-title:first-of-type {
+  margin-top: 2px;
+}
+
+/* ===================== Experience / Education entries ===================== */
+.entry {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed var(--divider);
+}
+
+.block .entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.entry-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.entry-org {
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  margin-top: 8px;
+}
+
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  color: var(--meta);
+}
+
+.entry-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.entry-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.entry-list li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+/* Degree row with grade on the right */
+.entry-degree {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.grade {
+  border-left: 2px solid var(--divider);
+  padding-left: 16px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.grade-label {
+  font-size: 13px;
+  color: var(--meta);
+  margin-bottom: 6px;
+}
+
+.grade-value {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.grade-value strong {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+/* ===================== About ===================== */
+.about {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* ===================== Skills tags ===================== */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+
+.tag {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--divider);
+}
+
+/* ===================== Courses ===================== */
+.course {
+  padding-bottom: 11px;
+  margin-bottom: 11px;
+  border-bottom: 1px dashed var(--divider);
+}
+
+.course:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.course-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.course-org {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ===================== Languages ===================== */
+.lang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 11px;
+  margin-bottom: 11px;
+  border-bottom: 1px dashed var(--divider);
+}
+
+.lang:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.lang-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.lang-level {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.dots {
+  display: flex;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--dot-off);
+}
+
+.dot.on {
+  background: var(--blue);
+}
+
+/* ===================== Interests ===================== */
+.interest {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--divider);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.interest:last-child {
+  border-bottom: none;
+}
+
+/* ===================== Quarto (.qmd) compatibility =====================
+   Quarto's [text]{.class} syntax emits inline <span>s. These classes were
+   block-level <p>s in the plain HTML version, so force block display here.
+   Harmless to resume.html (they were already blocks). */
+.role,
+.entry-org,
+.course-title,
+.course-org,
+.lang-name,
+.lang-level,
+.grade-label,
+.grade-value,
+.about {
+  display: block;
+}
+
+/* Quarto wraps each heading + its content in a <section>; neutralize the
+   default vertical spacing so our own margins control the rhythm. */
+.col > section {
+  margin: 0 0 30px;
+}
+
+.col > section:last-child {
+  margin-bottom: 0;
+}
