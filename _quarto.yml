@@ -1,0 +1,24 @@
+project:
+  type: default
+  output-dir: _output
+
+format:
+  html:
+    css: styles.css
+    theme: none
+    df-print: kable
+    page-layout: full
+    embed-resources: true
+    toc: false
+    minimal: true
+  pdf:
+    documentclass: article
+    geometry:
+      - margin=1.4cm
+    fontsize: 10pt
+    mainfont: "Arial"
+    include-in-header:
+      text: |
+        \usepackage{titlesec}
+        \usepackage{xcolor}
+        \definecolor{cvblue}{HTML}{4A5FD9}

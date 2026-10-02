@@ -1,0 +1,277 @@
+::::: {.page .qmd}
+
+<!-- ===================== HEADER ===================== -->
+:::: {.header}
+::: {.header-main}
+# Fernando Millán Villalobos {.name}
+
+[Journalist]{.role}
+
+::: {.contact}
+[**078 693 09 57**]{.contact-item .ico-phone}
+[**fernando.millan.villalobos@gmail.com**]{.contact-item .ico-mail}
+[**Eggstrasse 3b, 8124 Maur**]{.contact-item .ico-pin}
+[**September 9th 1980**]{.contact-item .ico-cal}
+[**Spanish / Swiss**]{.contact-item .ico-flag}
+:::
+:::
+
+![](avatar.png){.avatar}
+::::
+
+<!-- ===================== BODY (two columns) ===================== -->
+:::: {.columns}
+
+<!-- ---------- LEFT COLUMN ---------- -->
+::: {.col .col-left}
+
+## Professional Experience {.section-title}
+
+::: {.entry}
+### Ground Staff {.entry-title}
+[Checkport AG, Zurich Airport (FZAG)]{.entry-org} 
+
+[[10/2022 - 07/2025]{.meta} [Zürich, Switzerland]{.meta}]{.entry-meta}
+
+[[+]{.cross} Delivered [ground handling]{.highlight} and [customer service]{.bold} operations for United Airlines, including [gate]{.bold} and [boarding]{.bold} support, [transit]{.bold}, [check-in]{.bold} and [document verification]{.bold} ([DocCheck/AIM]{.italic}).]{.entry-content}
+:::
+
+::: {.entry}
+### Visiting Scholar {.entry-title}
+[Institut für Interaktive Technologien (FHNW)]{.entry-org}
+
+[[2020 - 2021]{.meta} [Brugg-Windisch, Aargau, Switzerland]{.meta}]{.entry-meta}
+
+[[+]{.cross} Conducted [data collection]{.bold} and [analysis]{.bold} as a researcher on the "[Perceptual Illusion]{.italic}" project, recruited directly by [Prof. Dr. Arzu Çöltekin]{.highlight} following strong performance in [data visualization]{.bold} during prior studies.]{.entry-content}
+:::
+
+::: {.entry}
+### Layout Designer {.entry-title}
+[MRM/McCann]{.entry-org}
+
+[[02/2011 - 04/2011]{.meta} [Madrid, Spain]{.meta}]{.entry-meta}
+
+[[+]{.cross} Collaborated within a cross-functional design team to [redesign]{.bold} the [corporate product catalog]{.highlight} for global client [Sika Group]{.italic}, ensuring visual consistency across print and digital layouts.]{.entry-content}
+:::
+
+::: {.entry}
+### Graphic Designer {.entry-title}
+[Mujer Hoy Corazón Magazine, Grupo Vocento]{.entry-org}
+
+[[07/2009 - 09/2009]{.meta} [Madrid, Spain]{.meta}]{.entry-meta}
+
+[[+]{.cross} Produced [layout]{.bold}, [image editing]{.bold}, and [editorial design]{.bold} for a leading Spanish [lifestyle magazine]{.highlight} within one of Spain's largest media publishing groups.]{.entry-content}
+:::
+
+::: {.entry .no-line}
+### Graphic Designer {.entry-title}
+[FHM Magazine]{.entry-org}
+
+[[08/2007 - 04/2009]{.meta} [Madrid, Spain]{.meta}]{.entry-meta}
+
+[[+]{.cross} Delivered [layout]{.bold}, [image editing]{.bold}, and [editorial design]{.bold} for the Spanish national edition of FHM, an internationally recognized, high-circulation [men's lifestyle magazine]{.highlight}.]{.entry-content}
+:::
+
+<!-- ::: {.entry}
+### Layout Designer {.entry-title}
+[On Madrid, Leisure Guide of El País, Grupo PRISA]{.entry-org}
+
+[[02/2007 - 08/2007]{.meta} [Madrid, Spain]{.meta}]{.entry-meta}
+
+[[+]{.cross} Executed weekly [layout]{.bold} and [editorial design]{.bold} under tight deadlines for a high-circulation [supplement]{.highlight} distributed with [El País]{.italic}' Sunday edition in Madrid.]{.entry-content}
+::: -->
+
+<!-- ::: {.entry}
+### Freelance Graphic Designer {.entry-title}
+[Instituto de Práctica Empresarial (IPE)]{.entry-org}
+
+[[2006 - 2007]{.meta} [Málaga, Spain]{.meta}]{.entry-meta}
+
+[[+]{.cross} Delivered end-to-end [editorial design]{.bold} for [a private educational business institution]{.highlight}, producing a corporate magazine, brochures, flyers, and promotional posters across multiple projects.]{.entry-content}
+::: -->
+
+<!-- ::: {.entry}
+### Workshop Instructor, "Book Layout" {.entry-title}
+[Asociación de Editores de Andalucía (AEA)]{.entry-org}
+
+[[2006 - 2007]{.meta} [Málaga, Spain]{.meta}]{.entry-meta}
+
+[[+]{.cross} Independently designed and delivered [a book-layout training workshop]{.highlight} for secondary-school students (ages 10–16), [developing all materials and presenting]{.bold} across multiple municipalities.]{.entry-content}
+::: -->
+
+<!-- ::: {.entry}
+### Journalist/Graphic Designer (Internship) {.entry-title}
+[Granada Hoy Newspaper]{.entry-org}
+
+[[07/2004 - 09/2004]{.meta} [Granada, Spain]{.meta}]{.entry-meta}
+
+[[+]{.cross} Worked as visual journalist and information designer, translating editorial content into clear, reader-focused visual layouts.]{.entry-content}
+::: -->
+
+## Education {.section-title}
+
+:::: {.entry .edu}
+### Degree in Journalism {.entry-title}
+[University of Málaga (UMA)]{.entry-org}
+
+[[1998 - 2006]{.meta} [Málaga, Spain]{.meta}]{.entry-meta}
+:::
+<!-- ::: {.grade}
+[Grade]{.grade-label}
+[**good** / 2.12]{.grade-value}
+::: -->
+
+::: {.entry}
+### BSc Data Science {.entry-title}
+[Fachhochschule Nordwestschweiz (FHNW)]{.entry-org}
+
+[[09/2019 - 09/2020]{.meta} [Brugg-Windisch, Aargau, Switzerland]{.meta}]{.entry-meta}
+:::
+:::
+
+<!-- ---------- RIGHT COLUMN ---------- -->
+::: {.col .col-right}
+
+## About Me {.section-title}
+
+[A [multilingual]{.bold} communications and [visual design expert]{.bold} with experience in editorial design, data visualization, and [customer]{.bold} operations across media, aviation, and research. I transform [complex data into clear information]{.highlight}.]{.about}
+
+## Skills {.section-title}
+
+::: {.tags}
+[Adaptability]{.tag} [Problem Solving]{.tag} [Attention to Detail]{.tag} [Multicultural Team Collaboration]{.tag} [Time Management]{.tag} [Editorial Design]{.tag} [Typography]{.tag} [Infographic Design]{.tag} [Data Visualization and Analysis]{.tag}  [Adobe Suite]{.tag} [HTML5]{.tag} [CSS3]{.tag} [JavaScript]{.tag} [Python]{.tag} [R]{.tag}  
+:::
+
+## Training / Courses {.section-title}
+
+::: {.course}
+[Python Programming Intermediate]{.course-title}
+[DataQuest]{.entry-org} 
+[[12 - 12/2018]{.meta} [Online]{.meta}]{.entry-meta}
+
+:::
+
+::: {.course}
+[Data Visualization und Infographics with D3]{.course-title}
+[Knight Center for Journalism in the Americas]{.entry-org}
+[[01 - 03/2016]{.meta} [Online]{.meta}]{.entry-meta}
+
+:::
+
+::: {.course}
+[Foundations for the Analysis and Teaching of Spanish Grammar at Level B2]{.course-title}
+[Instituto Cervantes]{.entry-org}
+[[10 - 11/2015]{.meta} [Online]{.meta}]{.entry-meta}
+
+:::
+
+::: {.course .no-line}
+[Data Visualization]{.course-title}
+[Universidad Internacional de Andalucía (UNIA)]{.entry-org}
+[[12 - 12/2015]{.meta} [Online]{.meta}]{.entry-meta}
+
+:::
+
+<!-- ::: {.course}
+[Web-Design with CSS: Basics]{.course-title}
+[[02 - 04/2015]{.meta} [Zürich, Switzerland]{.meta}]{.entry-meta}
+[EB Zürich]{.course-org}
+:::
+
+::: {.course}
+[Web-Publishing]{.course-title}
+[[04 - 10/2010]{.meta} [Madrid, Spain]{.meta}]{.entry-meta}
+[Centro de Tecnologías de la Información y las Comunicaciones Madrid-Sur]{.course-org}
+:::
+
+::: {.course}
+[Graphic Design]{.course-title}
+[[12/2004 - 07/2005]{.meta} [Málaga, Spain]{.meta}]{.entry-meta}
+[Sistemas de Enseñanza]{.course-org}
+::: -->
+
+## Languages {.section-title}
+
+:::: {.lang}
+::: {.lang-info}
+[Spanish]{.lang-name}
+[Native]{.lang-level}
+:::
+[[]{.dot .on}[]{.dot .on}[]{.dot .on}[]{.dot .on}[]{.dot .on}]{.dots aria-label="5 out of 5"}
+::::
+
+:::: {.lang}
+::: {.lang-info}
+[German]{.lang-name}
+[Intermediate (B2-C1)]{.lang-level}
+:::
+[[]{.dot .on}[]{.dot .on}[]{.dot .on}[]{.dot}[]{.dot}]{.dots aria-label="3 out of 5"}
+::::
+
+:::: {.lang}
+::: {.lang-info}
+[English]{.lang-name}
+[Advanced (C1)]{.lang-level}
+:::
+[[]{.dot .on}[]{.dot .on}[]{.dot .on}[]{.dot .on}[]{.dot}]{.dots aria-label="4 out of 5"}
+::::
+
+## Interests {.section-title}
+
+[North American literature]{.interest .ico-book}
+
+[Basketball coach for seven years]{.interest .ico-ball}
+
+:::
+
+::::
+
+:::::
+
+<!-- ============================================================= -->
+<!-- =====================  PAGE 2  =============================== -->
+<!-- Duplicate this whole block to add more pages. Fill the columns -->
+<!-- with the same .entry / .course / .tag patterns used on page 1. -->
+<!-- ============================================================= -->
+
+<!-- ::::: {.page .qmd}
+
+<!-- Compact continuation header -->
+<!-- :::: {.header-cont}
+[Fernando Millán Villalobos]{.cont-name}
+[Page 2]{.cont-page}
+:::: -->
+
+:::: {.columns}
+
+<!-- ---------- LEFT COLUMN ---------- -->
+::: {.col .col-left}
+
+<!-- ## Projects {.section-title}
+
+::: {.entry}
+### Project Title {.entry-title}
+[Organization / Client]{.entry-org}
+
+[[MM/YYYY - MM/YYYY]{.meta} [Location]{.meta}]{.entry-meta}
+
+- Describe the project, your role, and the outcome here.
+:::
+
+::: -->
+
+<!-- ---------- RIGHT COLUMN ---------- -->
+<!-- ::: {.col .col-right}
+
+## References {.section-title}
+
+::: {.course}
+[Reference Name]{.course-title}
+[Title, Company — contact]{.course-org}
+:::
+
+::: -->
+
+::::
+
+:::::

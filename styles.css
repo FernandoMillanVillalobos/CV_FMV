@@ -1,0 +1,561 @@
+/* ===================== Base / Tokens ===================== */
+:root {
+  --blue: #163b84;
+  --orange: #ff2424;
+  --ink: #111111;
+  --muted: #4b5563;
+  --meta: #6b7280;
+  --divider: #d7dbe0;
+  --dot-off: #d9dce3;
+  --page-w: 1000px;
+  --page-h: 1414px; /* A4 aspect ratio at --page-w */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #e9eaee;
+  color: var(--ink);
+  font-family: "Fakt Pro Light", "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===================== Page ===================== */
+.page {
+  width: var(--page-w);
+  min-height: var(--page-h);
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 48px 60px 56px;
+}
+
+/* Space between stacked pages on screen */
+.page + .page {
+  margin-top: 32px;
+}
+
+/* Print: one sheet per .page, no screen chrome */
+@media print {
+  html,
+  body {
+    background: #ffffff;
+  }
+  .page {
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    page-break-after: always;
+  }
+  .page:last-child {
+    page-break-after: auto;
+  }
+}
+
+/* ===================== Continuation header (page 2+) ===================== */
+/* .header-cont {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 20px;
+  margin-bottom: 8px;
+  border-bottom: 2.5px solid var(--ink);
+}
+
+.header-cont .cont-name {
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
+}
+
+.header-cont .cont-page {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--meta);
+} */
+
+/* ===================== Header ===================== */
+.header {
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 10px;
+}
+
+.name {
+  /* border: 1px solid pink; */
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.02;
+}
+
+.role {
+
+  color: var(--blue);
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* Remove default Pandoc paragraph spacing inside .contact */
+.contact p {
+  margin: 0;
+  padding: 0;
+  line-height: .2;
+  display: inline; /* Keep items flowing naturally */
+  margin-top: 8px;
+}
+
+.contact {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content:flex-start;
+  column-gap: 26px;
+  row-gap: 4px;
+  max-width: 600px;
+}
+
+.contact-item {
+  /* border: 1px solid blue; */
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5px;
+  font-size: 12px;
+  color: var(--ink);
+}
+
+.contact-item strong {
+  font-weight: 700;
+}
+
+.ico {
+  width: 16px;
+  height: 16px;
+  fill: var(--blue);
+  flex-shrink: 0;
+}
+
+.ico-sm {
+  width: 13px;
+  height: 13px;
+  fill: var(--meta);
+  flex-shrink: 0;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background: var(--blue);
+  display: block;
+}
+
+/* ===================== Two-column layout ===================== */
+.columns {
+  display: flex;
+  gap: 44px;
+}
+
+.col-left {
+  width: 56%;
+}
+
+.col-right {
+  width: 44%;
+}
+
+.block {
+  margin-bottom: 30px;
+}
+
+.block:last-child {
+  margin-bottom: 0;
+}
+
+/* ===================== Section headings ===================== */
+.section-title {
+  /* border: 1px solid green; */
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  padding-bottom: 8px;
+  border-bottom: 2.5px solid var(--ink);
+  margin-bottom: 10px;
+}
+
+.sub-title {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  margin: 14px 0 12px;
+}
+
+.sub-title:first-of-type {
+  margin-top: 0px;
+}
+
+/* ===================== Experience / Education entries ===================== */
+.cross {
+  color: var(--orange)
+}
+
+.italic{
+  font-style: italic;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.highlight {
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: .5px;
+  text-underline-offset: 4px;
+}
+
+.entry {
+  text-transform: none;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--divider);
+}
+
+.entry.no-line {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.entry.edu.entry-title {
+padding-bottom: 5px;
+margin-bottom: 10px;
+}
+
+.block .entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.entry-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.entry-content{
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--ink);
+    font-family: "Stanley Trial", "Academico", serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.entry-org {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  margin: 8px 0px;
+  font-weight: 700;
+}
+
+.entry .edu {
+  margin: 0px;
+  padding: 0px;
+}
+
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--meta);
+  font-weight: 700;
+}
+
+.entry-list {
+  list-style: none;
+  margin-top: 5px;
+}
+
+.entry-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 12px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.entry-list li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.grade {
+  border-left: 2px solid var(--divider);
+  padding-left: 16px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.grade-label {
+  font-size: 10px;
+  color: var(--meta);
+  margin-bottom: 6px;
+}
+
+.grade-value {
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.grade-value strong {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+/* ===================== About ===================== */
+.about {
+  font-family: "Stanley Trial", "Academico", serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 11px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+/* ===================== Skills tags ===================== */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  padding-bottom: 8px;
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: .5px;
+  text-underline-offset: 4px;
+  /* border: 1px solid green; */
+  margin-right: 8px;
+}
+
+/* ===================== Courses ===================== */
+.course {
+  padding-bottom: 11px;
+  margin-bottom: 11px;
+  border-bottom: 1px dashed var(--divider);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.course.no-line {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.course-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.course-org {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 0px;
+}
+
+/* ===================== Languages ===================== */
+.lang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 8px;
+  /* border-bottom: 1px dashed var(--divider); */
+}
+
+.lang:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0;
+}
+
+.lang-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.lang-level {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.dots {
+  display: flex;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--dot-off);
+}
+
+.dot.on {
+  background: var(--blue);
+}
+
+/* ===================== Interests ===================== */
+.interest {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--divider);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.interest:last-child {
+  border-bottom: none;
+}
+
+/* ===================== Quarto (.qmd) compatibility =====================
+   Quarto's [text]{.class} syntax emits inline <span>s. These classes were
+   block-level <p>s in the plain HTML version, so force block display here.
+   Harmless to index.html (they were already blocks). */
+.role,
+.entry-org,
+.course-title,
+.course-org,
+.lang-name,
+.lang-level,
+.grade-label,
+.grade-value,
+.about {
+  display: block;
+}
+
+/* Quarto wraps each heading + its content in a <section>; neutralize the
+   default vertical spacing so our own margins control the rhythm. */
+.col > section {
+  margin: 0 0 20px;
+}
+
+.col > section:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+/* ===================== CSS-based icons (Quarto only) =====================
+   The .qmd version can't carry inline <svg> nodes through Pandoc's span
+   syntax, so icons are rendered here as ::before background images. All
+   rules are scoped under .qmd so index.html (which keeps its inline SVGs)
+   is completely unaffected and never shows doubled icons. */
+.qmd .contact-item::before,
+.qmd .interest::before,
+.qmd .entry-meta .meta::before {
+  content: "";
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.qmd .contact-item::before {
+  width: 16px;
+  height: 16px;
+}
+
+.qmd .interest::before {
+  width: 20px;
+  height: 20px;
+}
+
+.qmd .entry-meta .meta::before {
+  width: 13px;
+  height: 13px;
+}
+
+/* Contact icons (blue) */
+.qmd .ico-phone::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23163b84' d='M6.6 10.8a15.9 15.9 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1z'/%3E%3C/svg%3E");
+}
+
+.qmd .ico-mail::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23163b84' d='M12 2a10 10 0 1 0 4.3 19 1 1 0 1 0-.86-1.8A8 8 0 1 1 20 12v1a1.5 1.5 0 0 1-3 0V8a1 1 0 0 0-2 0v.35A5 5 0 1 0 16 16a3.5 3.5 0 0 0 6-3v-1A10 10 0 0 0 12 2zm0 13a3 3 0 1 1 0-6 3 3 0 0 1 0 6z'/%3E%3C/svg%3E");
+}
+
+.qmd .ico-pin::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23163b84' d='M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E");
+}
+
+.qmd .ico-cal::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23163b84' d='M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1zm12 8H5v9h14v-9z'/%3E%3C/svg%3E");
+}
+
+.qmd .ico-flag::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23163b84' d='M5 2a1 1 0 0 1 1 1v1.5c3-1.5 6 1.5 9 0V13c-3 1.5-6-1.5-9 0V22a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1z'/%3E%3C/svg%3E");
+}
+
+/* Interest icons (blue) */
+.qmd .ico-book::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23163b84' d='M4 4h7a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5H4V4zm16 0h-3a3 3 0 0 0-3 3v13a2.5 2.5 0 0 1 2.5-2.5H20V4z'/%3E%3C/svg%3E");
+}
+
+.qmd .ico-ball::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23163b84' d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.9 9h-3.4a15.9 15.9 0 0 0-1.1-5.2A8 8 0 0 1 19.9 11zM12 4c.9 1.3 1.9 3.7 2.1 7H9.9C10.1 7.7 11.1 5.3 12 4zM8.6 5.8A15.9 15.9 0 0 0 7.5 11H4.1a8 8 0 0 1 4.5-5.2zM4.1 13h3.4a15.9 15.9 0 0 0 1.1 5.2A8 8 0 0 1 4.1 13zM12 20c-.9-1.3-1.9-3.7-2.1-7h4.2c-.2 3.3-1.2 5.7-2.1 7zm3.4-1.8a15.9 15.9 0 0 0 1.1-5.2h3.4a8 8 0 0 1-4.5 5.2z'/%3E%3C/svg%3E");
+}
+
+/* Entry meta icons (gray): 1st = date (calendar), 2nd = location (pin) */
+.qmd .entry-meta .meta:nth-child(1)::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%236b7280' d='M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1zm12 8H5v9h14v-9z'/%3E%3C/svg%3E");
+}
+
+.qmd .entry-meta .meta:nth-child(2)::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%236b7280' d='M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E");
+}
